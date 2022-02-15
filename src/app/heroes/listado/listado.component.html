@@ -1,0 +1,16 @@
+<p *ngIf="hayActivo">Héroes Activos</p>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{i + 1}} - {{heroe}}
+    </li>
+</ul>
+
+<div *ngIf="hayBorrado"><p>Héroes Borrados</p></div>
+<ul>
+    <li *ngFor="let borrado of heroesBorrados; let i = index">
+        {{i + 1}} - {{borrado}}
+    </li>
+</ul>
+
+<button (click)="borrarHeroe()">Borrar último Héroe</button>
